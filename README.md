@@ -28,7 +28,7 @@ This folder contains codes for data preprocessing, feature extraction and the im
 
 Sample the cwru data.
 
-### Feature Preparation 
+### Feature Extraction 
 
 Based on the sampled data, extract different domain features from the time series data. And the features extractions are applied on time windows.
 
