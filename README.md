@@ -13,25 +13,24 @@ Our work is trying to make **"machine doctors"** act as the real doctors who not
   - [Table of Contents](#table-of-contents)
   - [Data](#data)
   - [Code](#code)
-    - [Feature Preparation](#feature-extraction)
+    - [Data Preprocessing](#data-process)
+    - [Feature Extraction](#feature-extraction)
     - [DEFTCNN](#explain-cnn)
 <!-- TOC END -->
 
 ## Data
-This folder contains two pickle files, which are extracted features and labels for tool wear sensing experiments. Each pickle file contain x_train, y_train, x_test, y_test. The task is defined as a regression problem.
-
-- data_normal: each data sample is a vector. The features are extracted from the whole time sequences. 
-- data_seq: each data sample is a tensor. The features are extracted from windows of the time time sequences. 
-
-Especially, data_seq can be used by LSTM and CNN models. data_normal can be utilized by conventional ML models.
+This folder contains the features and labels in a clean format, which will be used as the input data for the main notebook: DEFTCNN.
 
 ## Code
-This folder contains codes for feature extraction and the implementation of DEFTCNN.
+This folder contains codes for data preprocessing, feature extraction and the implementation of DEFTCNN.
 
-### Feature Extraction
-RMS, VAR, MAX, Peak, Skew, Kurt, Wavelet, Spectral Kurt, Spectral Skewness, Spectral Powder features are extracted from the input time series. 
+### Data Preprocessing
+
+Sample the cwru data.
+
+### Feature Preparation 
+
+Based on the sampled data, extract different domain features from the time series data. And the features extractions are applied on time windows.
 
 ### DEFTCNN
-Based on Keras, autoencoder and its variants, implementations of DBN, LSTM, Bi-directional LSTM and CNN models are provided
-
 
